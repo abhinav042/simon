@@ -1,11 +1,7 @@
 var KEYS = ['c', 'd', 'e', 'f'];
 var NOTE_DURATION = 1000;
-<<<<<<< HEAD
 let playTimer;
 let tempStore = [];
-=======
-
->>>>>>> 79e98000757f8cd89c8b5e7002b098d6bbbbf678
 // NoteBox
 //
 // Acts as an interface to the coloured note boxes on the page, exposing methods
@@ -57,7 +53,6 @@ function NoteBox(key, onClick) {
 	// Call this NoteBox's clickHandler and play the note.
 	this.clickHandler = function () {
 		if (!enabled) return;
-<<<<<<< HEAD
 		this.onClick(this.key);
 		this.play();
 		tempStore.push(this);
@@ -75,11 +70,6 @@ function NoteBox(key, onClick) {
 			//resetting tempStore
 			tempStore = []; 
 		}, 2500);
-=======
-
-		this.onClick(this.key)
-		this.play()
->>>>>>> 79e98000757f8cd89c8b5e7002b098d6bbbbf678
 	}.bind(this)
 
 	boxEl.addEventListener('mousedown', this.clickHandler);
@@ -91,17 +81,6 @@ function NoteBox(key, onClick) {
 // clicking the corresponding boxes on the page will play the NoteBox's audio.
 // It will also demonstrate programmatically playing notes by calling play directly.
 var notes = {};
-<<<<<<< HEAD
 KEYS.forEach(function (key) {
 	notes[key] = new NoteBox(key);
 });
-=======
-
-KEYS.forEach(function (key) {
-	notes[key] = new NoteBox(key);
-});
-
-KEYS.concat(KEYS.slice().reverse()).forEach(function(key, i) {
-	setTimeout(notes[key].play.bind(null, key), i * NOTE_DURATION);
-});
->>>>>>> 79e98000757f8cd89c8b5e7002b098d6bbbbf678
