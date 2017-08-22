@@ -52,7 +52,7 @@ function NoteBox(key, onClick) {
 	// Call this NoteBox's clickHandler and play the note.
 	this.clickHandler = function () {
 		if (!enabled) return;
-
+		
 		this.onClick(this.key)
 		this.play()
 	}.bind(this)
@@ -73,6 +73,7 @@ KEYS.forEach(function (key) {
 
 const INITIAL_NOTE = Math.floor(Math.random()*4);
 gameSequence.push(INITIAL_NOTE);
+
 
 // KEYS.concat(KEYS.slice().reverse()).forEach(function(key, i) {
 // 	setTimeout(notes[key].play.bind(null, key), i * NOTE_DURATION);
